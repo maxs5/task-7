@@ -180,6 +180,11 @@ function TaskPage() {
 
   useEffect(() => {
     let active = true;
+    if (id === undefined) {
+      return () => {
+        active = false;
+      };
+    }
 
     async function loadTask() {
       setLoading(true);
