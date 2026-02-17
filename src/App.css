@@ -26,30 +26,11 @@ h1 {
   color: #3f5574;
 }
 
-.tabs {
+.header-row {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.tab {
-  border: 1px solid #b8c8dc;
-  border-radius: 999px;
-  padding: 10px 14px;
-  background: #f7faff;
-  cursor: pointer;
-  transition: transform 0.15s ease, background-color 0.15s ease;
-}
-
-.tab:hover {
-  transform: translateY(-1px);
-}
-
-.tab.active {
-  background: #204e86;
-  color: #fff;
-  border-color: #204e86;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .hint {
@@ -114,12 +95,6 @@ button {
   padding: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.todo-item.readonly {
-  padding: 11px 12px;
 }
 
 .actions {
@@ -172,6 +147,77 @@ button {
   padding: 18px;
   color: #496181;
   background: #f8fbff;
+}
+
+.task-link {
+  color: #1a3d67;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-link:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  background: #e1ecf9;
+  color: #1a446f;
+  margin-bottom: 12px;
+}
+
+.task-title {
+  margin: 0 0 10px;
+}
+
+.task-full-text {
+  margin: 0;
+  line-height: 1.55;
+  color: #223d5e;
+  background: #f7fbff;
+  border: 1px solid #d8e4f1;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.edit-panel {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.edit-panel label {
+  font-size: 14px;
+  color: #3d5473;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b7c8dd;
+  border-radius: 10px;
+  font-size: 15px;
+  resize: vertical;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #1f578f;
+  box-shadow: 0 0 0 3px rgba(32, 84, 145, 0.15);
+}
+
+.not-found {
+  text-align: center;
+}
+
+.to-home {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #195694;
 }
 
 @media (max-width: 720px) {
