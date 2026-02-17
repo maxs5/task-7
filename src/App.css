@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #e8fff3 0%, #f6f9ff 55%, #fff7ea 100%);
+  color: #13253f;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  width: min(900px, 100%);
+  background: #ffffffcc;
+  backdrop-filter: blur(5px);
+  border: 1px solid #d8e2ef;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 14px 36px rgba(15, 55, 95, 0.13);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #3f5574;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  border: 1px solid #b8c8dc;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: #f7faff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+}
+
+.tab.active {
+  background: #204e86;
+  color: #fff;
+  border-color: #204e86;
+}
+
+.hint {
+  color: #3d5473;
+  margin-top: 16px;
+}
+
+.add-form,
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1 1 300px;
+  padding: 11px 12px;
+  border: 1px solid #b7c8dd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1f578f;
+  box-shadow: 0 0 0 3px rgba(32, 84, 145, 0.15);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #205892;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle {
+  background: #e0eaf8;
+  color: #18375f;
+}
+
+.toggle.active {
+  background: #246f49;
+  color: #fff;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.todo-item {
+  background: #fff;
+  border: 1px solid #d9e4f1;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.todo-item.readonly {
+  padding: 11px 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.small {
+  background: #1f568d;
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.small.ghost {
+  background: #e3ecf8;
+  color: #1a3f68;
+}
+
+.small.danger {
+  background: #b44343;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: #f6e7b7;
+  color: #7a5d00;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.done {
+  background: #cdeed9;
+  color: #125e3a;
+}
+
+.status {
+  margin-top: 14px;
+}
+
+.status.error {
+  color: #a53939;
+}
+
+.empty {
+  text-align: center;
+  border: 1px dashed #c0d0e4;
+  border-radius: 12px;
+  padding: 18px;
+  color: #496181;
+  background: #f8fbff;
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .todo-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    justify-content: flex-end;
   }
 }
